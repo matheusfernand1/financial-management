@@ -70,3 +70,10 @@ A aplicação segue uma arquitetura em camadas (Layered architecture), separando
 - **Singleton**: O Spring gerencia os beans de serviço como singletons por padrão, como as classes em `service` (`ContaService`, `TransacaoService`). Assim, existe apenas uma instância dessas classes durante o ciclo de vida da aplicação.
 - **Repository**: Abstrai o acesso a dados, facilitando testes e manutenção.
 - **Service Layer**: Centraliza a lógica de negócio, promovendo reutilização e organização do código.
+
+## Exemplos de aplicação dos principíos SOLID
+- **Single Responsibility Principle (SRP)**: Cada classe tem uma única responsabilidade. Por exemplo, `ContaService` é responsável apenas por operações relacionadas a contas.
+- **Open/Closed Principle (OCP)**: As classes estão abertas para extensão, mas fechadas para modificação. Por exemplo, se quisermos adicionar um novo tipo de transação, podemos criar uma nova classe que estenda a funcionalidade existente sem modificar as classes já existentes.
+- **Liskov Substitution Principle (LSP)**: As subclasses podem ser usadas no lugar das superclasses sem alterar o comportamento esperado. Por exemplo, se tivermos uma classe `ContaPremium` que estende `Conta`, podemos usá-la onde uma `Conta` é esperada.
+- **Interface Segregation Principle (ISP)**: As interfaces são específicas e não forçam implementações desnecessárias. Por exemplo, se tivermos uma interface `Transacao`, ela pode ter métodos específicos para diferentes tipos de transações, evitando que uma classe implemente métodos que não utiliza.
+- **Dependency Inversion Principle (DIP)**: As classes de alto nível não dependem de classes de baixo nível, ambas dependem de abstrações. Por exemplo, `ContaService` depende da interface `ContaRepository`, permitindo que possamos trocar a implementação do repositório sem afetar o serviço.
