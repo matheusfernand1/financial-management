@@ -1,6 +1,6 @@
 # Financial Management
 
-Aplicação para gerenciamento financeiro pessoal.
+Aplicação para gerenciamento financeiro.
 
 ## Como executar
 
