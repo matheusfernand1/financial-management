@@ -1,7 +1,6 @@
 package com.ngbilling.financial_management.controller;
 
 import com.ngbilling.financial_management.exception.ContaNaoEncontradaException;
-import com.ngbilling.financial_management.exception.SaldoInsuficienteException;
 import com.ngbilling.financial_management.model.Conta;
 import com.ngbilling.financial_management.service.TransacaoService;
 import org.springframework.beans.factory.annotation.Autowired;
